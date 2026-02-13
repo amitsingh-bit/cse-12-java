@@ -39,13 +39,12 @@ class Guest extends Customer {
         System.out.println("Guest Customer");
     }
     public Guest(int cid, String cname, int dc){
-        setCustId(cid);
-        setCustName(cname);
+        super(cid,cname);
         delCharges = dc;
     }
+    @Override
     public void show(){
-        System.out.println("Customer Id:"+getCustId());
-        System.out.println("Customer Name:"+getCustName());
+        super.show();
         System.out.println("Delivery Charges:"+delCharges);
     }
 }
@@ -57,8 +56,7 @@ class Regular extends Customer {
         System.out.println("Regular Customer");
     }
     public Regular(int cid,String cname,int d){
-        setCustId(cid);
-        setCustName(cname);
+        super(cid, cname);
         disc=d;
     }
     public int getDiscount(){
@@ -67,9 +65,9 @@ class Regular extends Customer {
     public void setDiscount(int d){
         disc = d;
     }
+    @Override
     public void show(){
-        System.out.println("Customer Id:"+getCustId());
-        System.out.println("Customer Name:"+getCustName());
+        super.show();
         System.out.println("Discount:"+disc);
     }
 }
@@ -81,15 +79,12 @@ class Premium extends Regular {
         System.out.println("Premium Customer");
     }
     public Premium(int cid,String cname, int d,int p){
-        setCustId(cid);
-        setCustName(cname);
-        setDiscount(d);
+        super(cid,cname,d);
         points = p;
     }
+    @Override
     public void show(){
-        System.out.println("Customer Id:"+getCustId());
-        System.out.println("Customer Name:"+getCustName());
-        System.out.println("Discount:"+getDiscount());
+        super.show();
         System.out.println("Points:"+points);
     }
 }
