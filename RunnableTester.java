@@ -1,8 +1,8 @@
-public class ThreadTester extends Thread{
+public class RunnableTester implements Runnable{
     public void run(){
         try {
-            System.out.println("in Run: "+getState());
-            sleep(5000);
+            System.out.println("in Run: "+ getState());
+            Thread.sleep(5000);
             System.out.println("Thread is running");
         } catch (Exception e) {
             System.out.println(e.getMessage());
