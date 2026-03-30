@@ -12,7 +12,6 @@ list.add("Objective C");
 list.add("Scala");
 System.out.println("Elements of List are:");
 System.out.println(list);
-// Accessing elements
 System.out.println("Element at Index 1: " + list.get(1));
 list.set(1,
 "JavaScript");
