@@ -10,4 +10,10 @@ void main(){
     System.out.println(map);
     map.put("bavi",null);
     System.out.println(map);
+    
+    Map<String,Integer> map2 = new HashMap<>();
+    map2.putAll(map);
+    System.out.println(map2);
+    System.out.println(map.get("ravi"));
+    System.out.println(map.getOrDefault("Ramesh", null));
 }
